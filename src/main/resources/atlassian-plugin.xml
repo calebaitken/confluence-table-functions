@@ -1,0 +1,34 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="table-functions"/>
+
+    <resource type="download" name="images/" location="/images"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="table-functions-resources" name="table-functions Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="table-functions.css" location="/css/table-functions.css"/>
+        <resource type="download" name="table-functions.js" location="/js/table-functions.js"/>
+
+        <context>table-functions</context>
+    </web-resource>
+
+    <xhtml-macro name="table-functions" class="wiki.uqracing.TableFunctions" key="table-functions"
+                 icon="/download/resources/${atlassian.plugin.key}/images/UQR_Logo_Colour.png">
+        <category name="formatting"/>
+        <description key="wiki.uiqracing.table-functions.desc"/>
+        <parameters>
+            <param name="Display?" type="boolean" default="true"/>
+        </parameters>
+    </xhtml-macro>
+    
+</atlassian-plugin>
