@@ -4,6 +4,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
+    
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>wiki.uqracing</groupId>
     <artifactId>table-functions</artifactId>
@@ -19,6 +21,11 @@
     <packaging>atlassian-plugin</packaging>
 
     <dependencies>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.10.2</version>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
