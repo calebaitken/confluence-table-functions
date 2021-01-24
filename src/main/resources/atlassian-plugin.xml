@@ -22,10 +22,10 @@
         <context>table-functions</context>
     </web-resource>
 
-    <xhtml-macro name="table-functions" class="wiki.uqracing.TableFunctions" key="table-functions"
+    <xhtml-macro name="table-functions" class="wiki.uqracing.macro.TableFunctions" key="table-functions"
                  icon="/download/resources/${atlassian.plugin.key}/images/UQR_Logo_Colour.png">
         <category name="formatting"/>
-        <description key="wiki.uiqracing.table-functions.desc"/>
+        <description key="wiki.uqracing.macro.table-functions.desc"/>
         <parameters>
             <param name="Display?" type="boolean" default="true"/>
         </parameters>
